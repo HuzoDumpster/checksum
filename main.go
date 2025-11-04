@@ -53,7 +53,7 @@ func sha256file(filename string) (string, error) {
 
 
 func main() {
-    fmt.Println("Checksum application v1")
+    fmt.Println("Checksum application v1.0")
     // Define Flags & Help Messages
     var fileFlag   = flag.String("file", "", "Path to a single file.");
     var folderFlag = flag.String("folder", "", "Path to a folder with files to get the checksum of.");
