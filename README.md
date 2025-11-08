@@ -50,7 +50,21 @@ Alla ovat vaiheet ja Git-komennot, joita käytin harjoituksessa versionhallinnan
 
 1. Loin private ja public SSH avaimet, lisäsin ne käyttäjälle ja kloonasin repon SSH kanssa ( `git clone git@github.com:HuzoDumpster/checksums.git` ).
 2. Loin toisen "dev" haaran jossa loin V1 sovelluksesta.
-
+3. Lisäsin README.md tekstipäivitys commitin, vaihdoin main/ haaraan ja mergasin sen devin kanssa, joten devin tiedostot kopioitui main/ haaraan.
+4. Lisäsin main haaraan pää .go tiedoston ja pushasin päivitetyn main/ haaran, sekä dev/ haaran.
+5. Lisäsin riville 56 tulostustekstiä molempiin harroihin hiema eri tekstillä ja sain merge conflictin 
+```
+┌──(unknown㉿Linux)-[~/Documents/Temporary/Versiohallinta/checksum]
+└─$ git merge dev
+Auto-merging main.go
+CONFLICT (add/add): Merge conflict in main.go
+Automatic merge failed; fix conflicts and then commit the result.
+```
+Korjasin tämän pitämällä dev haaran version teidostosta.
+6. Aloin koodaamaan main.go tiedoston uutta ominaisuutta dev/ haarassa ja halusin vaihtaa nopeasti main/ haaraan, joten suoritin komennon `git stash` ja vaihdoin haaraa, sitten vaihdoin takaisin dev/ haaraan ja suoritin komennon `git stash pop`
+https://i.imgur.com/XFS1REa.png
+7. Koodasin loppuun uuden ominaisuuden ja loin commitin.
+8. 
 ---
 
 ### CLI History
@@ -67,7 +81,16 @@ Alla ovat vaiheet ja Git-komennot, joita käytin harjoituksessa versionhallinnan
 571  git commit -m "Alkuperäisen README.md lisäys."
 573  git checkout -b dev
 574  git branch -a
-
+( Coded / Edited Files)
+639  git status
+640  git add README.md
+641  git commit -m "Päivitetty README.md sovelluksen ensimmäiseen versioon."
+642  git checkout main
+643  git merge dev
+644  git add main.go
+645  git commit -m "Lisätty versio yksi (main.go)"
+646  git push origin main
+647  git push origin dev
 ```
 
 ---
