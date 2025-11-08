@@ -64,7 +64,11 @@ Korjasin tämän pitämällä dev haaran version teidostosta.
 6. Aloin koodaamaan main.go tiedoston uutta ominaisuutta dev/ haarassa ja halusin vaihtaa nopeasti main/ haaraan, joten suoritin komennon `git stash` ja vaihdoin haaraa, sitten vaihdoin takaisin dev/ haaraan ja suoritin komennon `git stash pop`
 https://i.imgur.com/XFS1REa.png
 7. Koodasin loppuun uuden ominaisuuden ja loin commitin.
-8. 
+8. Tein tahallaan virheen ja reverttasin
+https://i.imgur.com/nuDqV5m.png
+9. Yritin cherry-pick:ata commitin mainista, mutta ei tee mitään koska on jo devissä ( git cherry-pick 39e2854 )
+10. Lisäsin tägin v1.0.0 joka on stable versio
+11. Loin .gitignore tiedoston, ja testauksen vuoksi jätin binäärin.
 ---
 
 ### CLI History
