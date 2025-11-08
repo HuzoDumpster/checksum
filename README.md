@@ -68,6 +68,7 @@ CONFLICT (add/add): Merge conflict in main.go
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 Korjasin tämän pitämällä dev haaran version teidostosta.
+
 6. Aloin koodaamaan main.go tiedoston uutta ominaisuutta dev/ haarassa ja halusin vaihtaa nopeasti main/ haaraan, joten suoritin komennon `git stash` ja vaihdoin haaraa, sitten vaihdoin takaisin dev/ haaraan ja suoritin komennon `git stash pop`
 https://i.imgur.com/XFS1REa.png
 7. Koodasin loppuun uuden ominaisuuden ja loin commitin.
