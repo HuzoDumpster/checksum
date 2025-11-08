@@ -16,6 +16,7 @@ checksum [FLAGS]
 |------|--------------|----------|
 | `--file` | Generate checksum for a single file | `--file example.txt` |
 | `--folder` | Generate checksums for all files in a folder | `--folder ./downloads` |
+| `--format` | Choose outputting format ( flags; c = checksum, p = path, d = date) | `--format cdp` |
 
 ---
 
@@ -26,8 +27,12 @@ checksum [FLAGS]
 checksum --folder ./myfiles
 ```
 #### Generate SHA256 checksum for one file
-```
+```bash
 checksum --file ./test.txt
+```
+#### Generate SHA256 checksum for one file, but output only the path and date
+```bash
+checksum --file ./test.txt --format pd
 ```
 
 ## Help Message
@@ -38,6 +43,8 @@ Usage:
 Flags:
   --file     Path to a single file
   --folder   Path to a folder for batch checksums
+  --format   Choose output format flags: `c` = checksum, `p` = path, `d` = date (default = `cpd`)
+
 ```
 
 ---
@@ -69,6 +76,8 @@ https://i.imgur.com/nuDqV5m.png
 9. Yritin cherry-pick:ata commitin mainista, mutta ei tee mitään koska on jo devissä ( git cherry-pick 39e2854 )
 10. Lisäsin tägin v1.0.0 joka on stable versio
 11. Loin .gitignore tiedoston, ja testauksen vuoksi jätin binäärin.
+12. Käytin rebase komentoa, ja kaikki oli jo synkronoituna.
+13. Korjasin dokumentoinnin.
 ---
 
 ### CLI History
@@ -95,6 +104,61 @@ https://i.imgur.com/nuDqV5m.png
 645  git commit -m "Lisätty versio yksi (main.go)"
 646  git push origin main
 647  git push origin dev
+
+
+704  git status
+705  git stash push -u -m "puolvälissä"
+706  git status
+707  git stash list
+708  git stash pop
+731  go build main.go; ./main --file README.md --format cpd
+737  git add .
+738  git commit -m "added --format feature"
+739  git checkout dev
+740  it fetch origin
+741  clear
+742  git fetch origin
+743  git rebase main
+744  git checkout main
+745  git merge dev
+746  git push origin main && git push origin dev
+747  clear
+748  git checkout dev
+749  git rebase main
+750  clear
+751  echo "tahallinen virhe" >> main.go
+752  git add main.go
+753  git commit -m "purposeful error added"
+754  git log --oneline -1
+755  git revert HEAD
+756  git log --oneline -2
+757  clear
+758  git checkout main && git log --oneline
+759  git checkout dev
+760  git cherry-pick 39e2854
+761  git log --oneline -5
+762  git checkout main
+763  clear
+764  git merge dev
+765  git tag v1.0.0 && git push origin v1.0.0
+766  git checkout dev
+767  clear
+768  git checkout dev
+769  nano .gitignore
+770  git add .gitignore && git commit -m "added .gitignore for binaries"
+774  ls
+775  go build main.go; ./main --file README.md --format cdd
+776  clear
+777  git checkout main && git merge dev && git push origin main
+778  git checkout dev
+779  git fetch origin
+780  git rebase main
+781  ls
+782  git stash push -u -m "ei valmista kaikki"
+783  git stash pop
+784  git add README.md && git commit -m "updated readme.md"
+785  git rebase main
+786  clear
 ```
 
 ---

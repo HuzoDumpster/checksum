@@ -75,8 +75,6 @@ func main() {
 	var fileFlag = flag.String("file", "", "Path to a single file.")
 	var folderFlag = flag.String("folder", "", "Path to a folder with files to get the checksum of.")
 	var formatFlag = flag.String("format", "cpd", "Choose output format flags: `c` = checksum, `p` = path, `d` = date (default = `cpd`)")
-	//var algoFlag   = flag.String("algo", "", "Algorithm to use for checksums. Default: SHA256");
-	//var outFlag    = flag.String("out", "", "Folder path where to place checksum result file.")
 
 	// Flag Parsing
 	flag.Parse()
